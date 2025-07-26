@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "IRANSansWeb";
+  src: url("IRANSansWeb");
+}
+body {
+  font-family: "IRANSansWeb";
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: linear-gradient(45deg, #321e57, #102039b0);
+}
+
+p {
+  font-size: 15px;
+}
+
+/* ------------------------------------------------ */
+/* center */
+.main,
+.center {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+/* wheel */
+.wheel {
+  margin: 5% auto;
+}
+/* canvasContainer */
+#canvasContainer {
+  background-image: url(/wheel_back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 10%;
+}
+
+/* confetti-canvas */
+#confetti-canvas {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+/* -------------- titele --------------- */
+
+/* title */
+.titele {
+  color: #fff;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  padding: 0 10%;
+  margin-top: 5%;
+}
+.titele h1 {
+  font-size: 76px;
+  text-align: center;
+}
+.titele p {
+  font-size: 13px;
+  color: #cdc8c8;
+  direction: rtl;
+  line-height: 2;
+  text-align: right;
+}
+.titele p b {
+  color: #b8c8e9;
+}
+
+/* forms */
+.titele .forms {
+  text-align: center;
+  margin-top: 5%;
+}
+.titele input {
+  font-family: "IRANSansWeb";
+  outline: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #f6efdc;
+  color: #fff;
+  padding: 5px;
+  background-color: #f2cf8f00;
+  border-radius: 5px;
+}
+
+/* spin_button  */
+.titele #spin_button {
+  font-family: "IRANSansWeb";
+  border-radius: 5px;
+  outline: none;
+  font-size: 13px;
+  padding: 6px 22px;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid #f6efdc;
+  background-color: #654c90;
+  color: #fff;
+  box-shadow: inset -1px 1px 5px 0px #e5d0d0;
+  cursor: pointer;
+}
+.titele #spin_button:active,
+.titele #spin_button:hover {
+  background-color: #372d65;
+  box-shadow: inset -1px 1px 8px 0px #e5d0d0;
+}
+.titele #textWheel {
+  text-align: center;
+  font-size: 20px;
+}
+
+/* result */
+.result {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10% auto;
+  padding: 5px 0;
+}
+
+/* --------------------------------------------------------- */
+@media only screen and (max-width: 885px) {
+  body {
+    overflow-y: scroll;
+  }
+  .main,
+  .center {
+    display: block;
+    flex-direction: column-reverse;
+  }
+  #canvasContainer {
+    width: 57%;
+  }
+}
+@media only screen and (max-width: 835px) {
+  #canvasContainer {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 801px) {
+  #canvasContainer {
+    width: 63%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #canvasContainer {
+    width: 100%;
+  }
+  .result #textWheel {
+    font-size: 15px;
+  }
+  .result #imgWheel img {
+    width: 60%;
+  }
+}
