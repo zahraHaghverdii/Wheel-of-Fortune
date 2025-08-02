@@ -1,66 +1,67 @@
 <head>
-    <title>Wheel</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+  <title>Wheel</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
-
 <body>
-    <div class="conterAnim"></div>
+  <div class="conterAnim"></div>
   <div class="main">
     <div class="center">
+      <!-- titele -->
+      <div class="titele">
+        <h1>MUDERN</h1>
+        <p>
+          صرافی <b>مدرن</b> به مناسبت چهارمین سالگرد فعالیت خود کمپینی ترتیب
+          داده است که در آن کاربران می‌توانند با چرخاندن گردونه شانس به جوایز
+          نفیسی دست یابند. جزییات این کمپین در ادامه خبر و در قسمت اطلاعیه‌های
+          صرافی <b>مدرن</b> توضیح داده شده است.
+        </p>
+        <div class="forms">
+          <input
+            type="number"
+            id="setNumber"
+            name="input"
+            placeholder="شانس خودت و امتحان کن"
+          />
+          <button id="spin_button" onclick="startSpin();">شروع کن</button>
 
-    <!-- titele -->
-    <div class="titele">
-            <h1>HULUEX</h1>
-            <p>
-                صرافی <b>هلواکس</b> به مناسبت چهارمین سالگرد فعالیت خود کمپینی ترتیب داده است که در آن کاربران می‌توانند با چرخاندن گردونه شانس به جوایز نفیسی دست یابند. جزییات این کمپین در ادامه خبر و در قسمت اطلاعیه‌های صرافی <b>هلواکس</b> توضیح داده شده است.
-            </p>
-            <div class="forms">
-                <input type="number" id="setNumber" name="input" placeholder="شانس خودت و امتحان کن">
-                <button id="spin_button" onclick="startSpin();">شروع کن</button>
-            
-                <div class="result" id="result">
-                    <div id="textWheel"></div>
-                    <div id="imgWheel"></div>
-                </div>
-            </div>
-     </div>
+          <div class="result" id="result">
+            <div id="textWheel"></div>
+            <div id="imgWheel"></div>
+          </div>
+        </div>
+      </div>
 
-    <!-- canvasContainer -->
-    <div class="wheel">
+      <!-- canvasContainer -->
+      <div class="wheel">
         <div id="canvasContainer">
-            <canvas id="canvas" width="500" height="500"
+          <canvas
+            id="canvas"
+            width="500"
+            height="500"
             data-responsiveMinWidth="500"
-            data-responsiveScaleHeight="true"  
+            data-responsiveScaleHeight="true"
             data-responsiveMargin="5"
-            >
-                Canvas not supported, please user another browser.
-            </canvas>
-         </div>
+          >
+            Canvas not supported, please user another browser.
+          </canvas>
+        </div>
+      </div>
+
+      <!-- audio -->
+      <audio autoplay>
+        <source src="img/tick.mp3" type="audio/ogg" />
+      </audio>
     </div>
-
-    <!-- audio -->
-    <audio  autoplay>
-        <source src="img/tick.mp3" type="audio/ogg">
-     </audio> 
-
-
-</div>
   </div>
 
+  <script type="text/javascript" src="Winwheel.js"></script>
+  <script src="javascript/app.js"></script>
+  <script src="Winwheel.min.js"></script>
+  <script src="javascript/javascript.js"></script>
+  <script src="confetti.js"></script>
 
-
-
-
-    <script type="text/javascript" src="Winwheel.js"></script>
-    <script src="javascript/app.js"></script>
-    <script src="Winwheel.min.js"></script>
-    <script src="javascript/javascript.js"></script>
-    <script src="confetti.js"></script>
-
-    <!-- <script>
+  <!-- <script>
         startConfetti();
     </script> -->
-
-
 </body>
